@@ -1,0 +1,83 @@
+hash: 1ebaa7e18718f70fae68ff0d7d8fd763ad7f8cc4c8736fc1f8ac3bda614a0b12
+updated: 2017-04-24T17:38:58.011809572+09:00
+imports:
+- name: engo.io/ecs
+  version: 524c6573d8cfe9db0b7ec871c629ee4f60419e4d
+- name: engo.io/engo
+  version: 7d0d7b6a78f13035977bf9b511a2c0bd16678ce7
+  subpackages:
+  - common
+  - math
+- name: engo.io/gl
+  version: dbd3b277fe443f235d09dd4dd2fa7cfff49505a4
+- name: github.com/engoengine/math
+  version: afa637dd62b55bcb27f65fe1325d81bd79b32574
+- name: github.com/go-gl/gl
+  version: b303bcb3e83b7ef645a5104e1c2db7f8d9e8918a
+  subpackages:
+  - v2.1/gl
+- name: github.com/go-gl/glfw
+  version: 228fbf8cdbdda24bd57b5405bab240da3900b9a7
+  subpackages:
+  - v3.1/glfw
+- name: github.com/go-gl/mathgl
+  version: 9e3ea3e806141087fbb83a8a8e7038bf73eff120
+  subpackages:
+  - mgl32
+- name: github.com/golang/freetype
+  version: b12e98108289d6367ecd1a819deee597b2c3fa57
+  subpackages:
+  - raster
+  - truetype
+- name: github.com/gopherjs/gopherjs
+  version: 265040a1352e0bb611e87f5b985bf83600c66cce
+  subpackages:
+  - js
+- name: golang.org/x/exp
+  version: 239d448f23a0d683c1ab7225da01af038355f5e9
+  subpackages:
+  - shiny/driver/gldriver
+  - shiny/driver/internal/drawer
+  - shiny/driver/internal/errscreen
+  - shiny/driver/internal/event
+  - shiny/driver/internal/lifecycler
+  - shiny/driver/internal/win32
+  - shiny/driver/internal/x11key
+  - shiny/screen
+- name: golang.org/x/image
+  version: 3210c0296b49a552ad9668ede9c61008df821b94
+  subpackages:
+  - font
+  - math/f32
+  - math/f64
+  - math/fixed
+- name: golang.org/x/mobile
+  version: 0f3174026e2ab3ec13cad077d5a9f896936f354b
+  subpackages:
+  - app
+  - app/internal/callfn
+  - asset
+  - event/key
+  - event/lifecycle
+  - event/mouse
+  - event/paint
+  - event/size
+  - event/touch
+  - exp/app/debug
+  - exp/audio/al
+  - exp/f32
+  - exp/gl/glutil
+  - geom
+  - gl
+  - internal/mobileinit
+- name: golang.org/x/sys
+  version: 8fd966b47dbdd4faa03de0d06e3d733baeb9a1a9
+  subpackages:
+  - windows
+- name: honnef.co/go/js/dom
+  version: 0a64a2db1425c1881d4ec762370250c65f44b85b
+- name: honnef.co/go/js/util
+  version: 96b8dd9d16214b6cd9d8c8e84b3a375da4688108
+- name: honnef.co/go/js/xhr
+  version: 00e3346113aed89b501ead4e863c7c3d04fa0c5b
+testImports: []

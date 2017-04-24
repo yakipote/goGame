@@ -1,0 +1,7 @@
+package: go_game
+import:
+- package: engo.io/ecs
+- package: engo.io/engo
+- package: github.com/go-gl/mathgl
+  subpackages:
+  - mgl32
