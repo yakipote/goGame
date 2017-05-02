@@ -1,5 +1,5 @@
-hash: 1ebaa7e18718f70fae68ff0d7d8fd763ad7f8cc4c8736fc1f8ac3bda614a0b12
-updated: 2017-04-24T17:38:58.011809572+09:00
+hash: 9744c475cbd7d8fe572b6b0fbbcd271730667c5b4d4f257f08264278cfe65ae7
+updated: 2017-04-25T23:00:44.237829577+09:00
 imports:
 - name: engo.io/ecs
   version: 524c6573d8cfe9db0b7ec871c629ee4f60419e4d
@@ -63,6 +63,7 @@ imports:
   - event/paint
   - event/size
   - event/touch
+  - example/audio
   - exp/app/debug
   - exp/audio/al
   - exp/f32

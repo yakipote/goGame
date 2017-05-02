@@ -1,15 +1,17 @@
 package main
 
 import (
+	"log"
+
 	"engo.io/ecs"
 	"engo.io/engo"
 	"engo.io/engo/common"
-	"log"
 )
 
 type myScene struct{}
 
-type City struct {
+// Gopher gopherくんのstruct定義
+type Gopher struct {
 	ecs.BasicEntity
 	common.RenderComponent
 	common.SpaceComponent
@@ -21,33 +23,41 @@ func (*myScene) Type() string { return "myGame" }
 // Preload is called before loading any assets from the disk,
 // to allow you to register / queue them
 func (*myScene) Preload() {
-	engo.Files.Load("textures/test.jpg")
+	engo.Files.Load("textures/gopher.png")
 }
 
-// Setup is called before the main loop starts. It allows you
-// to add entities and systems to your Scene.
+// Setup メインループが開始する前に実行される関数
 func (*myScene) Setup(world *ecs.World) {
+
+	// worldに対してRenderSystemを追加
 	world.AddSystem(&common.RenderSystem{})
-	city := City{BasicEntity: ecs.NewBasic()}
-	city.SpaceComponent = common.SpaceComponent{
+
+	// gopherくんの初期化
+
+	// gopherくんのSpaceComponentの初期化。位置と大きさを設定する。
+	gopher := Gopher{BasicEntity: ecs.NewBasic()}
+	gopher.SpaceComponent = common.SpaceComponent{
 		Position: engo.Point{10, 10},
 		Width:    303,
 		Height:   641,
 	}
-	texture, err := common.LoadedSprite("textures/test.jpg")
+
+	// gopherくんのRenderComponentにpreLoadしていた画像を設定する
+	texture, err := common.LoadedSprite("textures/gopher.png")
 	if err != nil {
 		log.Println("Unable to load texture: " + err.Error())
 	}
 
-	city.RenderComponent = common.RenderComponent{
+	gopher.RenderComponent = common.RenderComponent{
 		Drawable: texture,
 		Scale:    engo.Point{1, 1},
 	}
 
+	// WorldのRenderSystemにgopherを登録
 	for _, system := range world.Systems() {
 		switch sys := system.(type) {
 		case *common.RenderSystem:
-			sys.Add(&city.BasicEntity, &city.RenderComponent, &city.SpaceComponent)
+			sys.Add(&gopher.BasicEntity, &gopher.RenderComponent, &gopher.SpaceComponent)
 		}
 	}
 
@@ -55,7 +65,7 @@ func (*myScene) Setup(world *ecs.World) {
 
 func main() {
 	opts := engo.RunOptions{
-		Title:  "Hello World",
+		Title:  "Go lang のゲーム",
 		Width:  400,
 		Height: 400,
 	}

@@ -5,3 +5,6 @@ import:
 - package: github.com/go-gl/mathgl
   subpackages:
   - mgl32
+- package: golang.org/x/mobile
+  subpackages:
+  - example/audio
